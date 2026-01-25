@@ -20,7 +20,7 @@
 		"node": ">=18"
 	},
 	"scripts": {
-		"test": "ava && tsd"
+		"test": "c8 ava && tsd"
 	},
 	"files": [
 		"index.js",
@@ -56,9 +56,16 @@
 	"devDependencies": {
 		"@types/node": "^22.5.0",
 		"ava": "^5.3.1",
+		"c8": "^8.0.1",
 		"get-stream": "^9.0.1",
 		"transform-tty": "^1.0.11",
 		"tsd": "^0.31.1",
 		"xo": "^0.59.3"
+	},
+	"c8": {
+		"reporter": [
+			"text",
+			"lcov"
+		]
 	}
 }
